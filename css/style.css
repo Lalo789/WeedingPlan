@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap');
 
-/* Definición de la paleta de colores */
+/* Estilos para la pagina de inicio  */
 :root {
     --color-fondo: #FAF3E0; /* Beige claro */
     --color-texto: #5D4037; /* Café oscuro */
@@ -171,6 +171,144 @@ header h1 {
 .footer-validation img {
     margin: 0 10px;
     opacity: 0.7;
+}
+
+/*  Estilos para el encabezado y menu */
+.main-header {
+    display: flex;
+    justify-content: center; /* Centra el título */
+    align-items: center;
+    padding: 20px 40px;
+    position: relative; /* Necesario para posicionar el menú de perfil */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-title {
+    font-family: var(--fuente-titulos);
+    font-size: 3.5rem;
+}
+
+.header-title a {
+    text-decoration: none;
+    color: var(--color-oro);
+}
+
+.profile-menu {
+    position: absolute;
+    right: 40px; /* Posiciona el menú a la derecha */
+}
+
+.profile-menu-trigger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end; /* Alinea el ícono y la flecha */
+    padding: 0;
+}
+
+.profile-icon {
+    font-size: 2.5rem; /* Tamaño del ícono de usuario */
+    color: var(--color-texto);
+}
+
+.arrow-icon {
+    font-size: 0.8rem;
+    color: var(--color-texto);
+    margin-left: -8px; /* Superpone la flecha sobre el ícono */
+    margin-bottom: 4px;
+    transition: transform 0.3s ease; /* Animación de la flecha */
+}
+
+.arrow-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    right: 0;
+    top: 110%;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: var(--color-texto);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--color-fondo);
+}
+
+.dropdown-content.show {
+    display: block; /* Muestra el menú */
+}
+
+/* ===== ESTILOS PARA LA PÁGINA DE SERVICIOS ===== */
+.services-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.services-title {
+    font-family: var(--fuente-titulos);
+    color: var(--color-oro);
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--color-oro);
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-family: var(--fuente-cuerpo);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--color-texto);
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-weight: 300;
 }
 
 
