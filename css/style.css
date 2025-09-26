@@ -67,8 +67,15 @@ hr {
     margin: 40px 0;
 }
 
-/* Estilo del botón */
-#test-db-btn {
+/* Contenedor para alinear botones */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Espacio entre los botones */
+}
+
+/* Estilo para los botones */
+.btn {
     font-family: var(--fuente-cuerpo);
     background-color: var(--color-oro);
     color: white;
@@ -81,27 +88,14 @@ hr {
     transition: background-color 0.3s ease, transform 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    white-space: nowrap; /* Evita que el texto del botón se parta en dos líneas */
 }
 
-#servicios-db-btn {
-    font-family: var(--fuente-cuerpo);
-    background-color: var(--color-oro);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-#test-db-btn:hover {
+.btn:hover {
     background-color: #a8874a; /* Un dorado más oscuro al pasar el mouse */
     transform: translateY(-2px);
 }
+
 
 
 
