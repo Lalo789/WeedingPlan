@@ -83,7 +83,7 @@ hr {
     letter-spacing: 1px;
 }
 
-#servicios-btn {
+#servicios-db-btn {
     font-family: var(--fuente-cuerpo);
     background-color: var(--color-oro);
     color: white;
@@ -97,9 +97,11 @@ hr {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
 #test-db-btn:hover {
     background-color: #a8874a; /* Un dorado más oscuro al pasar el mouse */
     transform: translateY(-2px);
 }
+
 
 
