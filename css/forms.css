@@ -112,3 +112,11 @@ form h2 {
     background-color: var(--color-gris);
     color: white;
 }
+
+.btn-modify {
+    background-color: #5D4037; 
+    color: white;
+    text-decoration: none; 
+    text-align: center; 
+}
+
