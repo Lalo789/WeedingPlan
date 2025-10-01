@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes registrados</title>
+    <link rel="stylesheet" href="https://raw.githack.com/Lalo789/WeedingPlan/main/css/style.css">
+</head>
+<body>
+    <h1>Clientes con Registro!</h1>
+    <a href="{{ url_for('nuevo_cliente') }}">Agregar Nuevo Cliente</a>
+    <ul>
+        {% for cliente in clientes %}
+            <li>{{ cliente.nombre }} - {{ cliente.correo }} - {{ cliente.telefono }}</li>
+        {% else %}
+            <li>No hay clientes registrados.</li>
+        {% endfor %}
+    </ul>
+<nav>
+    <ul>
+        <li><a href="/">inicio</a></li>
+    </ul>
+</nav>
+</body>
+</html>
