@@ -13,13 +13,13 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
     margin: 0;
-    padding-top: 90px; /* Espacio para el encabezado fijo */
+    padding-top: 90px; 
 }
 
 .page-container {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 90px); /* Ajusta la altura mínima */
+    min-height: calc(100vh - 90px); 
 }
 
 .content-wrap {
@@ -27,7 +27,6 @@ body {
     padding: 20px;
 }
 
-/* --- Encabezado Fijo y Ondulado --- */
 .main-header {
     position: fixed;
     top: 0;
@@ -55,7 +54,6 @@ body {
     color: var(--color-oro);
 }
 
-/* --- Menú de Perfil --- */
 .profile-menu { 
     position: absolute; 
     right: 40px; 
@@ -109,7 +107,6 @@ body {
     display: block; 
 }
 
-/* --- Tarjeta de Invitación Ancha --- */
 .invitation-card {
     background-color: white;
     border: 2px solid var(--color-oro);
@@ -148,7 +145,6 @@ hr {
     margin: 40px 0; 
 }
 
-/* --- Botones --- */
 .button-container { 
     display: flex; 
     justify-content: center; 
@@ -157,7 +153,8 @@ hr {
 .btn { 
     font-family: var(--fuente-cuerpo); 
     background-color: var(--color-oro); 
-    color: white; border: none; 
+    color: white; 
+    border: none; 
     padding: 15px 30px; 
     font-size: 1rem; 
     font-weight: 600; 
@@ -173,7 +170,6 @@ hr {
     transform: translateY(-2px); 
 }
 
-/* Footer */
 .site-footer { 
     background-color: #ffffff; 
     color: var(--color-texto); 
@@ -207,7 +203,6 @@ hr {
     border-top: 1px solid #e0e0e0; 
 }
 
-/* --- Página de Servicios --- */
 .services-container { 
     max-width: 1000px; 
     margin: 2rem auto; 
@@ -248,8 +243,6 @@ hr {
     margin-bottom: 10px; 
 }
 
-/* ESTILOS PARA LA NAVEGACIÓN PRINCIPAL */
-
 .main-header {
     justify-content: space-between;
 }
@@ -257,7 +250,7 @@ hr {
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 30px; /* Espacio entre los enlaces */
+    gap: 30px; 
 }
 
 .main-nav a {
@@ -267,33 +260,32 @@ hr {
     font-weight: 600;
     font-size: 1rem;
     padding-bottom: 5px;
-    border-bottom: 2px solid transparent; /* Línea inferior para efecto hover */
+    border-bottom: 2px solid transparent; 
     transition: border-color 0.3s ease;
 }
 
 .main-nav a:hover {
-    border-bottom-color: var(--color-oro); /* Muestra la línea al pasar el mouse */
+    border-bottom-color: var(--color-oro); 
 }
 
-/* Estilo especial para el botón de administrar */
 .main-nav a.nav-button {
     background-color: var(--color-oro);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    border-bottom: none; /* Quita la línea inferior del hover */
+    border-bottom: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .main-nav a.nav-button:hover {
-    background-color: #a8874a; /* Dorado más oscuro */
+    background-color: #a8874a; 
     transform: translateY(-2px);
     border-bottom: none;
 }
 
-/* Ajusta la posición del menú de perfil para que no se superponga */
 .profile-menu {
-    position: static; /* Quita el posicionamiento absoluto */
-    margin-left: auto; /* Empuja el menú de perfil a la derecha */
+    position: static; 
+    margin-left: auto; 
     padding-left: 30px;
 }
+
