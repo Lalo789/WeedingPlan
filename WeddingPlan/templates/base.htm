@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Wedding Plan{% endblock %}</title>
+    <link rel="stylesheet" href="https://raw.githack.com/Lalo789/WeedingPlan/main/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png">
+    {% block head_css %}{% endblock %}
+</head>
+
+<body>
+    <div class="page-container">
+        <header class="main-header">
+            <div class="header-title">
+                <a href="{{ url_for('index') }}">Wedding Plan</a>
+            </div>
+
+            <div class="profile-menu">
+                <button id="profile-menu-btn" class="profile-menu-trigger">
+                    <i class="fas fa-user-circle profile-icon"></i>
+                    <i id="profile-arrow" class="fas fa-chevron-down arrow-icon"></i>
+                </button>
+                <div id="profile-dropdown" class="dropdown-content">
+                    <a href="{{ url_for('nuevo_cliente') }}">Ver Perfil</a>
+                    <a href="{{ url_for('nuevo_cliente') }}">Registrarse</a>
+                    <a href="{{ url_for('nuevo_cliente') }}">Iniciar Sesión</a>
+                    <a href="{{ url_for('servicios_forms')}}">Administrar servicios</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrap">
+            <main>
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Nuestra Misión</h3>
+                    <p>Gestionar, organizar y optimizar la planificación de eventos para convertir tus sueños en
+                        realidad.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser la plataforma líder y de confianza en la planificación de bodas y celebraciones memorables.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><strong>Cliente:</strong> Meztly Alberdi Tejeda<br><strong>Whatsapp:</strong> 443-322-1100</p>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const profileBtn = document.getElementById('profile-menu-btn');
+        const dropdown = document.getElementById('profile-dropdown');
+        const arrow = document.getElementById('profile-arrow');
+        if (profileBtn) {
+            profileBtn.addEventListener('click', function (event) {
+                event.stopPropagation();
+                dropdown.classList.toggle('show');
+                arrow.classList.toggle('rotate');
+            });
+            window.addEventListener('click', function (event) {
+                if (!profileBtn.contains(event.target)) {
+                    if (dropdown.classList.contains('show')) {
+                        dropdown.classList.remove('show');
+                        arrow.classList.remove('rotate');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
