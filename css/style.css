@@ -1,13 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap');
-
-:root {
-    --color-fondo: #FAF3E0;
-    --color-texto: #5D4037;
-    --color-oro: #C0A062;
-    --fuente-titulos: 'Great Vibes', cursive;
-    --fuente-cuerpo: 'Montserrat', sans-serif;
-}
-
 body {
     font-family: var(--fuente-cuerpo);
     background-color: var(--color-fondo);
@@ -289,3 +279,12 @@ hr {
     padding-left: 30px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+    --color-fondo: #FAF3E0;
+    --color-texto: #5D4037;
+    --color-oro: #C0A062;
+    --fuente-titulos: 'Great Vibes', cursive;
+    --fuente-cuerpo: 'Montserrat', sans-serif;
+}
